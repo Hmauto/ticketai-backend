@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.render.com/render.schema.json",
+  "services": [
+    {
+      "type": "web",
+      "name": "ticketai-backend",
+      "runtime": "node",
+      "buildCommand": "npm install",
+      "startCommand": "npm start",
+      "envVars": [
+        {
+          "key": "NODE_ENV",
+          "value": "production"
+        },
+        {
+          "key": "PORT",
+          "value": "10000"
+        },
+        {
+          "key": "DATABASE_URL",
+          "sync": false
+        },
+        {
+          "key": "SUPABASE_URL",
+          "sync": false
+        },
+        {
+          "key": "SUPABASE_KEY",
+          "sync": false
+        },
+        {
+          "key": "OPENAI_API_KEY",
+          "sync": false
+        },
+        {
+          "key": "KIMI_API_KEY",
+          "sync": false
+        },
+        {
+          "key": "JWT_SECRET",
+          "generateValue": true
+        },
+        {
+          "key": "REDIS_URL",
+          "sync": false
+        }
+      ],
+      "healthCheckPath": "/health"
+    }
+  ]
+}
